@@ -47,173 +47,154 @@ export default function ProductModal({
                 initial={{ y: 40, opacity: 0, scale: 0.95 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.28 }}
-                className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+                className="relative bg-white rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto"
             >
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 z-10 p-2 hover:bg-[var(--cream-premium)] rounded-lg transition-all"
+                    className="fixed top-6 right-6 z-[100] p-3 bg-white shadow-xl border border-[var(--border-light)] rounded-full hover:bg-[var(--cream-premium)] transition-all"
                 >
                     <FaTimes size={24} className="text-[var(--charcoal)]" />
                 </button>
 
-                <div className="grid grid-cols-1 md:grid-cols-5 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8">
                     {/* Image (40%) */}
                     <div className="md:col-span-2 relative h-56 md:h-auto md:max-h-[90vh]">
                         <Image
                             src={product.image ?? ""}
                             alt={product.name}
                             fill
-                            className="object-cover"
+                            className="object-cover rounded-l-2xl"
                         />
                     </div>
 
                     {/* Content (60%) */}
-                    <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-between max-h-[90vh] overflow-auto">
-                        <div>
-                            <div className="inline-block bg-[var(--brand-light-green)]/10 text-[var(--brand-dark-green)] px-3 py-1 rounded-full text-xs font-semibold mb-4">
-                                Product Details
-                            </div>
-                            <h2 className="text-3xl font-heading font-semibold text-[var(--charcoal)] mb-3">
-                                {product.name}
-                                {activeVariant
-                                    ? ` — ${activeVariant.label}`
-                                    : ""}
-                            </h2>
-                            <p className="text-[var(--text-dark)] leading-relaxed mb-6">
-                                {activeVariant?.description ??
-                                    product.description}
-                            </p>
+                    <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
+                        {/* Badge */}
+                        <h4 className="w-fit bg-[var(--brand-light-green)]/10 text-[var(--brand-dark-green)] py-1 rounded-full text-xs font-semibold mb-4">
+                            Product Details
+                        </h4>
 
-                            <div className="space-y-6">
-                                <div>
-                                    <h4 className="font-semibold text-[var(--charcoal)] mb-2">
-                                        Specifications
-                                    </h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-[var(--muted)]">
-                                        <div className="space-y-2">
-                                            <div>
-                                                <span className="font-semibold text-[var(--charcoal)]">
-                                                    Origin:
-                                                </span>{" "}
-                                                {product.spec?.origin ??
-                                                    "India"}
-                                            </div>
-                                            <div>
-                                                <span className="font-semibold text-[var(--charcoal)]">
-                                                    Color:
-                                                </span>{" "}
-                                                {(product.spec?.colors ??
-                                                product.spec?.color)
-                                                    ? Array.isArray(
-                                                          product.spec?.colors,
-                                                      )
-                                                        ? product.spec.colors.join(
-                                                              " / ",
-                                                          )
-                                                        : product.spec.color
-                                                    : isGarlic
-                                                      ? "White"
-                                                      : "White / Red / Pink"}
-                                            </div>
-                                            <div>
-                                                <span className="font-semibold text-[var(--charcoal)]">
-                                                    Aroma:
-                                                </span>{" "}
-                                                {product.spec?.aroma ??
-                                                    "Strong Aroma (Indian Origin)"}
-                                            </div>
-                                            <div>
-                                                <span className="font-semibold text-[var(--charcoal)]">
-                                                    Qualities:
-                                                </span>
-                                                <div className="flex flex-wrap gap-2 mt-2">
-                                                    {(
-                                                        product.spec
-                                                            ?.qualities ?? [
-                                                            "Premium Grade",
-                                                            "A grade",
-                                                            "Commercial Grade",
-                                                        ]
-                                                    ).map((q: any) => (
-                                                        <span
-                                                            key={q}
-                                                            className="badge"
-                                                        >
-                                                            {q}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
+                        {/* Title */}
+                        <h2 className="text-4xl font-heading font-semibold text-[var(--charcoal)] mb-4">
+                            {product.name}
+                        </h2>
 
-                                        <div>
-                                            <h5 className="font-semibold text-[var(--charcoal)] mb-1">
-                                                Packaging Details
-                                            </h5>
-                                            <ul className="text-sm text-[var(--muted)] space-y-1">
-                                                <li className="flex items-start gap-2">
-                                                    <FaCheck className="text-[var(--brand-light-green)] mt-1" />{" "}
-                                                    {product.spec?.packing ??
-                                                        product.packaging ??
-                                                        "Packaging as per client requirement"}
-                                                </li>
-                                            </ul>
-                                        </div>
+                        {/* Description */}
+                        <p className="text-[var(--muted)] leading-relaxed text-lg mb-8">
+                            {product.description}
+                        </p>
+
+                        {/* Main Info Cards */}
+                        <div className="space-y-6">
+                            <div>
+                                <h4 className="font-semibold text-xl text-[var(--charcoal)] mb-4">
+                                    Specifications
+                                </h4>
+
+                                <div className="space-y-3 text-[var(--text-dark)] grid grid-cols-2 gap-x-8 gap-y-3">
+                                    <div>
+                                        <span className="font-semibold">
+                                            Origin:
+                                        </span>{" "}
+                                        {product.spec?.origin ?? "India"}
+                                    </div>
+
+                                    <div>
+                                        <span className="font-semibold">
+                                            Color:
+                                        </span>{" "}
+                                        {(product.spec?.colors ??
+                                        product.spec?.color)
+                                            ? Array.isArray(
+                                                  product.spec?.colors,
+                                              )
+                                                ? product.spec.colors.join(
+                                                      " / ",
+                                                  )
+                                                : product.spec.color
+                                            : isGarlic
+                                              ? "White"
+                                              : "White / Red / Pink"}
+                                    </div>
+
+                                    <div>
+                                        <span className="font-semibold">
+                                            Aroma:
+                                        </span>{" "}
+                                        {product.spec?.aroma ??
+                                            "Strong Aroma (Indian Origin)"}
+                                    </div>
+
+                                    <div>
+                                        <span className="font-semibold">
+                                            Packaging:
+                                        </span>{" "}
+                                        {product.spec?.packing ??
+                                            product.packaging ??
+                                            "Packaging as per client requirement"}
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 gap-6 mt-8">
                                 <div>
-                                    <h4 className="font-semibold text-[var(--charcoal)] mb-2">
+                                    <h4 className="font-semibold text-xl text-[var(--charcoal)] mb-4">
+                                        Available Quality Grades
+                                    </h4>
+
+                                    <div className="space-y-3">
+                                        {(
+                                            product.spec?.qualities ?? [
+                                                "Premium Grade",
+                                                "A Grade",
+                                                "Commercial Grade",
+                                            ]
+                                        ).map((q) => (
+                                            <div
+                                                key={q}
+                                                className="flex items-center gap-3"
+                                            >
+                                                <span>{q}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 className="font-semibold text-xl text-[var(--charcoal)] mb-4">
                                         Quality Assurance
                                     </h4>
-                                    <ul className="space-y-2 text-sm">
+
+                                    <div className="space-y-2">
                                         {[
                                             "ISO 22000 Certified",
                                             "Fully Traceable",
                                             "Hygienically Processed",
                                         ].map((item) => (
-                                            <li
+                                            <div
                                                 key={item}
-                                                className="flex items-center gap-2 text-[var(--text-dark)]"
+                                                className="flex items-center gap-3"
                                             >
                                                 <FaCheck
-                                                    size={16}
+                                                    size={14}
                                                     className="text-[var(--brand-light-green)]"
                                                 />
-                                                {item}
-                                            </li>
+
+                                                <span>{item}</span>
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* CTA */}
-                        <div className="flex gap-3 mt-8 pt-6 border-t border-[var(--border-light)]">
-                            <a
-                                href="/contact"
-                                className="btn-group-slide flex-1 inline-block bg-gradient-to-r from-[var(--brand-dark-green)] to-[var(--brand-forest)] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
-                            >
-                                <div className="btn-group-content">
-                                    <div className="btn-slide-default flex items-center justify-center">
-                                        <span>Send Inquiry</span>
-                                    </div>
-                                    <div className="btn-slide-hover flex items-center justify-center">
-                                        <span>Send Inquiry</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <button
-                                onClick={onClose}
-                                className="px-6 py-3 rounded-xl border-2 border-[var(--border-light)] text-[var(--charcoal)] hover:bg-[var(--cream-premium)] transition-all"
-                            >
-                                Close
-                            </button>
                         </div>
                     </div>
                 </div>
                 {/* Second row: variants tabs + variant details */}
                 <div className="p-6 md:p-8">
+                    <h3 className="text-2xl font-semibold text-[var(--charcoal)] mb-5">
+                        Available Forms & Sizes
+                    </h3>
                     {/* Variant Tabs */}
                     <div className="flex gap-2 flex-wrap mb-4">
                         {productVariants.map((v) => (
@@ -227,17 +208,26 @@ export default function ProductModal({
                         ))}
                     </div>
 
-                    <div className="bg-[var(--off-white)] p-3 rounded-xl border border-[var(--border-light)]">
+                    <div className="bg-white p-6 rounded-2xl border border-[var(--border-light)] shadow-sm">
                         {activeVariant ? (
-                            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                                <div className="md:col-span-2">
-                                    <div className="relative w-full h-56 md:h-48 rounded-md overflow-hidden bg-[var(--brand-light-green)]/5">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <div className="relative w-full h-72 md:h-[320px] rounded-md overflow-hidden bg-[var(--brand-light-green)]/5">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={activeVariant.key}
-                                                initial={{ opacity: 0, x: 20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                exit={{ opacity: 0, x: -20 }}
+                                                initial={{
+                                                    opacity: 0,
+                                                    scale: 0.95,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    scale: 1,
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    scale: 0.95,
+                                                }}
                                                 transition={{ duration: 0.32 }}
                                                 className="absolute inset-0"
                                             >
@@ -256,18 +246,22 @@ export default function ProductModal({
                                     </div>
                                 </div>
 
-                                <div className="md:col-span-3">
+                                <div>
                                     <div className="text-sm text-[var(--muted)]">
                                         Format
                                     </div>
                                     <div className="font-semibold mb-2">
                                         {activeVariant.label}
                                     </div>
-                                    <div className="text-sm text-[var(--muted)]">
-                                        Size
-                                    </div>
-                                    <div className="font-semibold">
-                                        {activeVariant.size ?? "N/A"}
+                                    <div className="mt-3">
+                                        <span className="text-sm text-[var(--muted)]">
+                                            Size:
+                                        </span>
+
+                                        <div className="font-semibold text-lg text-[var(--charcoal)]">
+                                            {activeVariant.size ??
+                                                "Custom Size Available"}
+                                        </div>
                                     </div>
                                     {activeVariant.description ? (
                                         <p className="text-xs text-[var(--muted)] mt-3">
@@ -303,6 +297,15 @@ export default function ProductModal({
                                                     "Packaging as per client requirement"}
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div className="mt-6 pt-4 border-t border-[var(--border-light)]">
+                                        <a
+                                            href="/contact"
+                                            className="inline-flex items-center justify-center w-full bg-gradient-to-r from-[var(--brand-dark-green)] to-[var(--brand-forest)] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                                        >
+                                            Request Quote for{" "}
+                                            {activeVariant.label}
+                                        </a>
                                     </div>
                                 </div>
                             </div>
