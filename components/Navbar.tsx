@@ -65,7 +65,7 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed w-full z-40 top-0 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-sm shadow-md border-b border-[var(--border-light)]" : "bg-white/5 backdrop-blur-sm"}`}
+            className={`fixed w-full z-40 top-0 transition-all duration-300 ${scrolled ? "bg-[var(--ivory-light)]/95 backdrop-blur-sm shadow-md border-b border-[var(--border-light)]" : "bg-[var(--background)]/80 backdrop-blur-sm"}`}
         >
             <div className="container flex items-center justify-between h-20 relative">
                 {/* Logo */}
@@ -99,7 +99,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <Link
                         href="/contact"
-                        className="btn-group-slide hidden md:inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[var(--brand-dark-green)] to-[var(--brand-forest)] text-white shadow-md hover:shadow-lg transition-all"
+                        className="btn-group-slide hidden md:inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[var(--brand-dark-green)] to-[var(--brand-forest)] text-white shadow-md hover:shadow-lg hover:text-white transition-all"
                     >
                         <div className="btn-group-content">
                             <div className="btn-slide-default">

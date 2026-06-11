@@ -5,44 +5,35 @@
 @tailwind utilities;
 
 :root {
-    /* Primary brand colors from logo */
-    --brand-dark-green: #1a5a3a;
-    --brand-light-green: #6ba86d;
-    --brand-forest: #2d7a52;
-    --brand-sage: #8a9d7f;
+    --brand-dark-green: #0d530e;
+    --brand-forest: #306d29;
+    --brand-light-green: #8bae55;
+    --brand-sage: #e7e1b1;
 
-    /* Legacy (remapped to new) */
-    --primary-dark: #1a5a3a;
-    --primary-olive: #6ba86d;
+    --primary-dark: #0d530e;
+    --primary-olive: #8bae55;
 
-    /* Earthy & Neutral palette */
-    --earth-brown: #8b7355;
-    --earth-tan: #a89878;
-    --charcoal: #3a3a3a;
-    --text-dark: #2b2b2b;
+    --background: #fbf5dd;
+    --cream-premium: #fbf5dd;
+    --ivory-light: #fff9ea;
+    --off-white: #f7f0d8;
+    --cream: #e7e1b1;
 
-    /* Premium whites & creams */
-    --cream-premium: #f5f1eb;
-    --ivory-light: #faf7f1;
-    --off-white: #f9f8f6;
-    --cream: #f5f1eb;
+    --footer: #0a420b;
 
-    /* Accents */
-    --accent: #d4a373;
-    --accent-gold: #c9a961;
-    --success: #6ba86d;
-    --warning: #d4a373;
-    --error: #c84a4a;
+    --charcoal: #2d2a26;
+    --text-dark: #4b4a46;
+    --muted: #76716a;
 
-    /* Neutral */
-    --muted: #6b7280;
-    --border-light: #e5e3e0;
-    --border: #d4d1cc;
+    --accent: #b89b52;
+    --accent-gold: #c8ad67;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+    --border-light: #e5ddbf;
+    --border: #d8ceaa;
+
+    --shadow-sm: 0 2px 8px rgba(13, 83, 14, 0.05);
+    --shadow-md: 0 8px 24px rgba(13, 83, 14, 0.08);
+    --shadow-lg: 0 18px 42px rgba(13, 83, 14, 0.12);
 }
 
 @layer base {
@@ -61,7 +52,7 @@
             "Helvetica Neue",
             Arial,
             sans-serif;
-        background: var(--cream-premium);
+        background: var(--background);
         color: var(--text-dark);
         letter-spacing: 0.3px;
         -webkit-font-smoothing: antialiased;
@@ -112,7 +103,11 @@
     a {
         color: var(--brand-dark-green);
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    a:hover {
+        color: var(--brand-forest);
     }
 }
 
@@ -199,7 +194,7 @@ a {
 }
 
 main {
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
 }
 
 /* Animations */
@@ -307,7 +302,16 @@ main {
 
 /* Card & Section Utilities */
 .card-premium {
-    @apply bg-white rounded-2xl shadow-sm border border-[var(--border-light)] transition-all duration-300 hover:shadow-md;
+    @apply rounded-2xl border border-[var(--border-light)] transition-all duration-300;
+
+    background: var(--off-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-sage);
 }
 
 .badge {
@@ -318,4 +322,22 @@ main {
     font-weight: 600;
     background-color: rgba(107, 168, 109, 0.1);
     color: var(--brand-dark-green);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fbf5dd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #306d29, #0d530e);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0d530e;
 }

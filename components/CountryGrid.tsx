@@ -47,19 +47,7 @@ export default function CountryGrid() {
                         scale: 1.02,
                     }}
                     transition={{ duration: 0.25 }}
-                    className="
-            group
-            bg-white
-            border
-            border-[var(--border-light)]
-            rounded-2xl
-            p-6
-            text-center
-            shadow-sm
-            hover:shadow-xl
-            transition-all
-            duration-300
-          "
+                    className="group bg-[var(--off-white)] border border-[var(--border-light)] rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                     <div className="flex justify-center mb-4">
                         <div className="relative w-14 h-14 rounded-full overflow-hidden shadow-md border border-gray-100">
