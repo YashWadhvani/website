@@ -60,6 +60,7 @@ export default function Navbar() {
         { href: "/about", label: "About" },
         { href: "/products", label: "Products" },
         { href: "/quality", label: "Quality" },
+        { href: "/exhibitions", label: "Exhibitions" },
         { href: "/contact", label: "Contact Us" },
     ];
 

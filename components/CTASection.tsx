@@ -18,7 +18,7 @@ export default function CTASection() {
                             logistics and ISO-certified quality.
                         </p>
                         <p className="text-sm text-[var(--cream)]">
-                            ✓ 50+ countries served ✓ ISO 22000 certified ✓ Full
+                            50+ countries served • ISO 22000 certified • Full
                             traceability
                         </p>
                     </div>

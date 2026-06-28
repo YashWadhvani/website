@@ -5,19 +5,14 @@ import { FaSearch, FaTimes } from 'react-icons/fa'
 import SectionHeading from '../../components/SectionHeading'
 import ProductCard from '../../components/ProductCard'
 import productsData from '../../data/products.json'
-import ProductModal from '../../components/ProductModal'
 
 const products = productsData.products
 
 export default function ProductsPage(){
   const [query,setQuery]=useState('')
   const [filter,setFilter]=useState('All')
-  const [active,setActive]=useState<any>(null)
-  const [open,setOpen]=useState(false)
 
   const visible = products.filter(p=> (filter==='All' || p.category===filter) && p.name.toLowerCase().includes(query.toLowerCase()))
-
-  function openProduct(p:any){ setActive(p); setOpen(true) }
 
   return (
     <main className="container py-24">
@@ -44,7 +39,7 @@ export default function ProductsPage(){
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-2">
-          {['All','Dehydrated Onion','Garlic','Spices','Peanuts','Vegetable Powders'].map(c=> (
+          {['All','Dehydrated Onion - White','Dehydrated Onion - Red','Dehydrated Onion - Pink','Dehydrated Fried Onion','Dehydrated Garlic','Spices','Peanuts'].map(c=> (
             <button 
               key={c} 
               onClick={()=>setFilter(c)} 
@@ -66,11 +61,9 @@ export default function ProductsPage(){
         )}
       </motion.div>
 
-      <motion.div initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} transition={{duration:0.6}} viewport={{once:true}} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12\">
-        {visible.map(p=>(<ProductCard key={p.id} product={p} onOpen={(pr:any)=>openProduct(pr)}/>))}
+      <motion.div initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} transition={{duration:0.6}} viewport={{once:true}} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        {visible.map(p=>(<ProductCard key={p.id} product={p} />))}
       </motion.div>
-
-      <ProductModal product={active} open={open} onClose={()=>setOpen(false)} />
     </main>
   )
 }

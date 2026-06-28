@@ -326,18 +326,47 @@ main {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #fbf5dd;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #306d29, #0d530e);
+    background: rgba(13, 83, 14, 0.7);
     border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0d530e;
+    background: rgba(13, 83, 14, 0.9);
+    background-clip: content-box;
+}
+
+/* Infinite Marquee Animations */
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 25s linear infinite;
+}
+
+.animate-marquee-fast {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 18s linear infinite;
+}
+
+.animate-marquee:hover, .animate-marquee-fast:hover {
+    animation-play-state: paused;
 }

@@ -10,6 +10,11 @@ export default function CertificationCard({cert}:{cert:any}){
         <div>
           <div className="font-semibold text-[var(--charcoal)]">{cert.title}</div>
           <div className="text-sm text-[var(--muted)] mt-1">{cert.org}</div>
+          {cert.no && (
+            <div className="text-xs text-[var(--brand-dark-green)] font-semibold mt-2 bg-[var(--brand-light-green)]/10 px-2.5 py-1 rounded-md border border-[var(--brand-light-green)]/20 w-fit">
+              {cert.no}
+            </div>
+          )}
         </div>
       </div>
     </div>

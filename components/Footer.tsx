@@ -96,6 +96,14 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
+                                    href="/exhibitions"
+                                    className="hover:text-[var(--cream)] transition-colors"
+                                >
+                                    Exhibitions
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                     href="/contact"
                                     className="hover:text-[var(--cream)] transition-colors"
                                 >

@@ -6,9 +6,10 @@ import { FaShieldAlt, FaCheckCircle, FaLeaf } from 'react-icons/fa'
 
 export default function QualityPage(){
   const certs=[
-    {abbr:'AP',title:'APEDA',org:'Agricultural Processed Export Development Authority'},
-    {abbr:'F',title:'FSSAI',org:'Food Safety & Standards Authority of India'},
-    {abbr:'ISO',title:'ISO 22000',org:'Food Safety Management'}
+    {abbr:'ISO',title:'ISO 22000:2018',org:'Food Safety Management System',no:'Certificate No: [Certificate Number Pending]'},
+    {abbr:'F',title:'FSSAI',org:'Food Safety & Standards Authority of India',no:'License No: [License Number Pending]'},
+    {abbr:'AP',title:'APEDA',org:'Agricultural & Processed Food Products Export Development Authority',no:'Registration No: [APEDA No Pending]'},
+    {abbr:'SB',title:'SPICES BOARD INDIA',org:'Ministry of Commerce & Industry, Govt. of India',no:'Registration No: [Spices Board No Pending]'}
   ]
 
   const features = [

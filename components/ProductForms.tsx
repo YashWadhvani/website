@@ -39,9 +39,13 @@ export default function ProductForms({ product }: { product: any }) {
             forms.push({ key, label: f, size: spec.sizes?.[key] });
         });
     } else if (spec.variants) {
-        spec.variants.forEach((f: string) => {
-            const key = normalizeKey(f);
-            forms.push({ key, label: f, size: spec.sizes?.[key] });
+        spec.variants.forEach((v: any) => {
+            const key = v.key || (typeof v.label === "string" ? normalizeKey(v.label) : "");
+            forms.push({
+                key,
+                label: typeof v.label === "string" ? v.label : (v.key || "Product Variant"),
+                size: v.size || spec.sizes?.[key],
+            });
         });
     } else if (spec.sizes) {
         Object.keys(spec.sizes).forEach((k) => {

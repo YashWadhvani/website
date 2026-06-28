@@ -1,68 +1,192 @@
 {
     "products": [
         {
-            "id": "onion",
-            "name": "Dehydrated Onion",
-            "category": "Dehydrated Onion",
-            "short": "Dehydrated White / Red / Pink / Yellow Onions",
-            "image": "/images/product-onion.png",
-            "description": "Dehydrated onion in multiple cuts and formats for the food industry.",
-            "packaging": "14 kg strong poly bag inside carton or as per client requirement",
+            "id": "onion-white",
+            "name": "Dehydrated Onion - White",
+            "category": "Dehydrated Onion - White",
+            "short": "Flakes, Chopped, Minced, Granules, Powder",
+            "image": "/images/products/onion-white-combined.png",
+            "description": "Premium dehydrated white onions processed from selected fresh onions, preserving natural aroma and flavor.",
+            "packaging": "14-15 kg strong poly bag inside carton or as per client requirement",
             "spec": {
                 "origin": "India",
-                "colors": [
-                    "White",
-                    "Red",
-                    "Pink",
-                    "Yellow",
-                    "Toasted",
-                    "Fried"
-                ],
-                "aroma": "Strong aroma — characteristic of Indian origin products",
-                "packing": "14 kg strong poly bag inside carton (custom packing available)",
-                "qualities": ["Premium Grade", "A grade", "Commercial Grade"],
-                "note": "Onion products available in multiple colours and cut forms. All products can be supplied as per customized cut size and specification. Specification available on request.",
+                "color": "White",
+                "aroma": "Characteristic strong white onion aroma",
+                "packing": "Poly-lined cartons / bags (custom packaging available)",
+                "qualities": ["Premium Grade", "A Grade", "Commercial Grade"],
                 "variants": [
                     {
                         "key": "flakes",
-                        "label": "Flakes",
-                        "image": "/images/onion-flakes.png",
+                        "label": "White Onion Flakes",
+                        "image": "/images/products/onion-white-flakes.png",
                         "size": "8-15 mm",
-                        "description": "Thin, crispy onion flakes suitable for soups, snack mixes and seasoning blends.",
-                        "packaging": "14 kg poly bag inside cartons; retail sachets available",
-                        "applications": ["Seasonings", "Soup Mixes", "Snacks"]
+                        "description": "Dehydrated white onion flakes suitable for seasoning, soups, and ready meals."
                     },
                     {
                         "key": "chopped",
-                        "label": "Chopped",
-                        "image": "/images/onion-chopped.png",
+                        "label": "White Onion Chopped",
+                        "image": "/images/products/onion-white-chopped.png",
                         "size": "3-5 mm",
-                        "description": "Uniform chopped onion pieces for ready-to-use culinary applications.",
-                        "packaging": "10–14 kg poly-lined bags or 25 kg cartons"
+                        "description": "Uniform chopped white onion pieces for culinary applications."
                     },
                     {
                         "key": "minced",
-                        "label": "Minced",
-                        "image": "/images/onion-minced.png",
+                        "label": "White Onion Minced",
+                        "image": "/images/products/onion-white-minced.png",
                         "size": "1-3 mm",
-                        "description": "Fine minced particles ideal for sauces, dressings and instant soups.",
-                        "packaging": "10–14 kg bags; retail and industrial packing available"
+                        "description": "Fine white onion minced particles ideal for dressings, sauces, and instant mixes."
                     },
                     {
                         "key": "granules",
-                        "label": "Granules",
-                        "image": "/images/onion-granules.png",
+                        "label": "White Onion Granules",
+                        "image": "/images/products/onion-white-granules.png",
                         "size": "0.5-1 mm",
-                        "description": "Coarse granules for textured seasonings and industrial blends.",
-                        "packaging": "25 kg bulk bags or 10 kg consumer packs"
+                        "description": "Coarse white onion granules for spice blends and textured seasonings."
                     },
                     {
                         "key": "powder",
-                        "label": "Powder",
-                        "image": "/images/onion-powder.png",
+                        "label": "White Onion Powder",
+                        "image": "/images/products/onion-white-powder.png",
                         "size": "80-100 mesh",
-                        "description": "Fine onion powder (80-100 mesh) for seasoning, flavoring and seasoning blends.",
-                        "packaging": "25 kg lined bags or bulk tanker loads for large orders"
+                        "description": "Fine white onion powder (80-100 mesh) for flavor seasoning and industrial food processing."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "onion-red",
+            "name": "Dehydrated Onion - Red",
+            "category": "Dehydrated Onion - Red",
+            "short": "Flakes, Chopped, Minced, Granules, Powder",
+            "image": "/images/products/onion-red-combined.png",
+            "description": "Red onions dehydrated to retain maximum color, aroma, and pungency in various forms.",
+            "packaging": "14-15 kg strong poly bag inside carton or as per client requirement",
+            "spec": {
+                "origin": "India",
+                "color": "Red / Dark Pink",
+                "aroma": "Characteristic red onion aroma",
+                "packing": "Poly-lined cartons / bags (custom packaging available)",
+                "qualities": ["Premium Grade", "A Grade", "Commercial Grade"],
+                "variants": [
+                    {
+                        "key": "flakes",
+                        "label": "Red Onion Flakes",
+                        "image": "/images/products/onion-red-flakes.png",
+                        "size": "8-15 mm",
+                        "description": "Dehydrated red onion flakes ideal for salads, seasoning mixes, and sauces."
+                    },
+                    {
+                        "key": "chopped",
+                        "label": "Red Onion Chopped",
+                        "image": "/images/products/onion-red-chopped.png",
+                        "size": "3-5 mm",
+                        "description": "Dehydrated chopped red onions for instant food preparations."
+                    },
+                    {
+                        "key": "minced",
+                        "label": "Red Onion Minced",
+                        "image": "/images/products/onion-red-minced.png",
+                        "size": "1-3 mm",
+                        "description": "Minced red onion for gravies, ready-to-eat products, and seasoning."
+                    },
+                    {
+                        "key": "granules",
+                        "label": "Red Onion Granules",
+                        "image": "/images/products/onion-red-granules.png",
+                        "size": "0.5-1 mm",
+                        "description": "Red onion granules with uniform color and consistency for dry blends."
+                    },
+                    {
+                        "key": "powder",
+                        "label": "Red Onion Powder",
+                        "image": "/images/products/onion-red-powder.png",
+                        "size": "80-100 mesh",
+                        "description": "Fine red onion powder for instant soups, batters, and snack coatings."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "onion-pink",
+            "name": "Dehydrated Onion - Pink",
+            "category": "Dehydrated Onion - Pink",
+            "short": "Flakes, Chopped, Minced, Granules, Powder",
+            "image": "/images/products/onion-pink-combined.png",
+            "description": "Mild pink onions dehydrated for specialized food processing and seasoning mixes.",
+            "packaging": "14-15 kg strong poly bag inside carton or as per client requirement",
+            "spec": {
+                "origin": "India",
+                "color": "Pink",
+                "aroma": "Sweet, mild pink onion aroma",
+                "packing": "Poly-lined cartons / bags (custom packaging available)",
+                "qualities": ["Premium Grade", "A Grade", "Commercial Grade"],
+                "variants": [
+                    {
+                        "key": "flakes",
+                        "label": "Pink Onion Flakes",
+                        "image": "/images/products/onion-pink-flakes.png",
+                        "size": "8-15 mm",
+                        "description": "Pink onion flakes for seasoning and ready-to-use food formulations."
+                    },
+                    {
+                        "key": "chopped",
+                        "label": "Pink Onion Chopped",
+                        "image": "/images/products/onion-pink-chopped.png",
+                        "size": "3-5 mm",
+                        "description": "Uniform chopped pink onion pieces."
+                    },
+                    {
+                        "key": "minced",
+                        "label": "Pink Onion Minced",
+                        "image": "/images/products/onion-pink-minced.png",
+                        "size": "1-3 mm",
+                        "description": "Fine pink onion minced particles."
+                    },
+                    {
+                        "key": "granules",
+                        "label": "Pink Onion Granules",
+                        "image": "/images/products/onion-pink-granules.png",
+                        "size": "0.5-1 mm",
+                        "description": "Uniform pink onion granules."
+                    },
+                    {
+                        "key": "powder",
+                        "label": "Pink Onion Powder",
+                        "image": "/images/products/onion-pink-powder.png",
+                        "size": "80-100 mesh",
+                        "description": "Fine pink onion powder for seasoning and coloring."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "onion-fried",
+            "name": "Dehydrated Fried Onion",
+            "category": "Dehydrated Fried Onion",
+            "short": "Fried Flakes, Crispy Fried Onion",
+            "image": "/images/products/onion-fried-combined.png",
+            "description": "Golden crispy fried onions, prepared under hygienic conditions, ideal for toppings and ready meals.",
+            "packaging": "10-12 kg strong poly bag inside carton or custom vacuum pack",
+            "spec": {
+                "origin": "India",
+                "color": "Golden Brown",
+                "aroma": "Rich fried onion flavor",
+                "packing": "Carton with inside poly-liner",
+                "qualities": ["Premium Crispy Grade"],
+                "variants": [
+                    {
+                        "key": "fried-flakes",
+                        "label": "Fried Onion Flakes",
+                        "image": "/images/products/onion-fried-flakes.png",
+                        "size": "8-15 mm",
+                        "description": "Crispy fried onion flakes for toppings, garnishing, and instant noodles."
+                    },
+                    {
+                        "key": "crispy-fried",
+                        "label": "Crispy Fried Onion",
+                        "image": "/images/products/onion-fried-crispy.png",
+                        "size": "Custom Size",
+                        "description": "Finely fried crispy onions for ready-to-eat dishes and industrial food manufacturing."
                     }
                 ]
             }
@@ -70,123 +194,110 @@
         {
             "id": "garlic",
             "name": "Dehydrated Garlic",
-            "category": "Garlic",
+            "category": "Dehydrated Garlic",
             "short": "Flakes, Chopped, Minced, Granules, Powder",
-            "image": "/images/product-garlic.png",
-            "description": "Aromatic dehydrated garlic in various cuts and grinds.",
+            "image": "/images/products/garlic-combined.png",
+            "description": "Aromatic dehydrated garlic of Indian origin, processed in multiple cut sizes.",
             "packaging": "25 kg strong poly bag inside carton or as per client requirement",
             "spec": {
                 "origin": "India",
-                "color": "White",
-                "aroma": "Strong aroma — characteristic of Indian origin products",
-                "packing": "25 kg strong poly bag inside carton (custom packing available)",
-                "qualities": ["Premium Grade", "A grade", "Commercial Grade"],
-                "note": "Garlic flakes size not specified; other sizes follow standard product size chart.",
+                "color": "Creamy White",
+                "aroma": "Characteristic strong garlic aroma",
+                "packing": "25 kg poly-lined cartons (custom packing available)",
+                "qualities": ["Premium Grade", "A Grade", "Commercial Grade"],
                 "variants": [
                     {
                         "key": "flakes",
-                        "label": "Flakes",
-                        "image": "/images/garlic-flakes.png",
-                        "size": null,
-                        "description": "Aromatic garlic flakes for snack mixes and ready-to-use seasoning blends.",
-                        "packaging": "25 kg poly-lined bags or retail sachets"
+                        "label": "Garlic Flakes",
+                        "image": "/images/products/garlic-flakes.png",
+                        "size": "No Size",
+                        "description": "Dehydrated garlic flakes with full flavor profile preservation, ideal for soups and seasonings."
                     },
                     {
                         "key": "chopped",
-                        "label": "Chopped",
-                        "image": "/images/garlic-chopped.png",
+                        "label": "Garlic Chopped",
+                        "image": "/images/products/garlic-chopped.png",
                         "size": "3-5 mm",
-                        "description": "Coarsely chopped garlic for culinary use and further processing.",
-                        "packaging": "10–25 kg bags depending on client requirements"
+                        "description": "Chopped garlic particles for instant meals and seasoning."
                     },
                     {
                         "key": "minced",
-                        "label": "Minced",
-                        "image": "/images/garlic-minced.png",
+                        "label": "Garlic Minced",
+                        "image": "/images/products/garlic-minced.png",
                         "size": "1-3 mm",
-                        "description": "Fine minced garlic for sauces, pastes and instant mixes.",
-                        "packaging": "10–14 kg bags for foodservice and industrial users"
+                        "description": "Minced garlic particles for dry mixes and spice blends."
                     },
                     {
                         "key": "granules",
-                        "label": "Granules",
-                        "image": "/images/garlic-granules.png",
+                        "label": "Garlic Granules",
+                        "image": "/images/products/garlic-granules.png",
                         "size": "0.5-1 mm",
-                        "description": "Granulated garlic for consistent dosing in manufacturing.",
-                        "packaging": "25 kg bulk bags or 1–5 kg retail packs"
+                        "description": "Garlic granules for consistent metering in automated packaging lines."
                     },
                     {
                         "key": "powder",
-                        "label": "Powder",
-                        "image": "/images/garlic-powder.png",
+                        "label": "Garlic Powder",
+                        "image": "/images/products/garlic-powder.png",
                         "size": "80-100 mesh",
-                        "description": "Garlic powder (80-100 mesh) with preserved aroma for seasoning.",
-                        "packaging": "25 kg lined bags for industrial use; retail packs available"
+                        "description": "Fine garlic powder (80-100 mesh) for institutional and industrial food formulations."
                     }
                 ]
             }
         },
         {
             "id": "spices",
-            "name": "Dehydrated Spices & Powders",
+            "name": "Spices",
             "category": "Spices",
-            "short": "Dry mango, ginger, tomato, lemon, tamarind powders",
-            "image": "/images/product-spices.jpg",
-            "description": "Dehydrated spice powders and blends for food manufacturers.",
-            "packaging": "Bulk, retail packs or as per client",
+            "short": "Dry mango, ginger, tomato, lemon, tamarind, turmeric powders",
+            "image": "/images/products/spices-combined.png",
+            "description": "Pure ground spices and dehydrated powders derived from fresh natural ingredients.",
+            "packaging": "Bulk multiwall paper bags or as per client specifications",
             "spec": {
                 "origin": "India",
-                "examples": [
-                    "Dry Mango Powder",
-                    "Ginger Powder",
-                    "Tomato Powder",
-                    "Lemon Powder",
-                    "Tamarind Powder"
-                ],
-                "packing": "As per client requirement",
+                "packing": "20-25 kg bags (custom options available)",
                 "qualities": ["Premium Grade", "Commercial Grade"],
                 "variants": [
                     {
                         "key": "dry-mango-powder",
                         "label": "Dry Mango Powder",
-                        "image": "/images/spice-mango.jpg",
-                        "description": "Sweet and tangy mango powder, ideal for confectionery and beverage applications.",
-                        "packaging": "25 kg food-grade bag; retail sachets available"
+                        "image": "/images/products/spices-dry-mango.png",
+                        "size": "80-100 mesh",
+                        "description": "Sweet, tangy mango powder (Amchur) for snacks, seasonings, and souring."
                     },
                     {
                         "key": "ginger-powder",
                         "label": "Ginger Powder",
-                        "image": "/images/spice-ginger.jpg",
-                        "description": "Aromatic ginger powder with consistent pungency for seasoning and blends.",
-                        "packaging": "25 kg bags or 1–5 kg retail packs"
+                        "image": "/images/products/spices-ginger.png",
+                        "size": "80-100 mesh",
+                        "description": "Pungent, warming ginger powder for baking, spices, and tea blends."
                     },
                     {
                         "key": "tomato-powder",
                         "label": "Tomato Powder",
-                        "image": "/images/spice-tomato.jpg",
-                        "description": "Concentrated tomato powder for sauces, soups and seasonings.",
-                        "packaging": "25 kg bulk bags or vacuum-sealed retail pouches"
+                        "image": "/images/products/spices-tomato.png",
+                        "size": "80-100 mesh",
+                        "description": "Micronized tomato powder with rich red color and taste for instant soups and seasoning."
                     },
                     {
                         "key": "lemon-powder",
                         "label": "Lemon Powder",
-                        "image": "/images/spice-lemon.jpg",
-                        "description": "Zesty lemon powder with preserved citrus aroma.",
-                        "packaging": "10–25 kg lined bags"
+                        "image": "/images/products/spices-lemon.png",
+                        "size": "80-100 mesh",
+                        "description": "Zesty dehydrated lemon powder for beverages and snack flavorings."
                     },
                     {
                         "key": "tamarind-powder",
                         "label": "Tamarind Powder",
-                        "image": "/images/spice-tamarind.jpg",
-                        "description": "Tamarind powder for sour notes in sauces and condiments.",
-                        "packaging": "25 kg poly-lined bags"
+                        "image": "/images/products/spices-tamarind.png",
+                        "size": "80-100 mesh",
+                        "description": "Concentrated tamarind powder offering traditional sour-sweet notes."
                     },
                     {
-                        "key": "powder",
-                        "label": "Powder",
-                        "image": "/images/product-spices.jpg",
-                        "description": "Fine spice powder suitable for industrial and retail applications.",
-                        "packaging": "Bulk or retail as per client requirement"
+                        "key": "turmeric-powder",
+                        "label": "Turmeric Powder / Fingers",
+                        "image": "/images/products/spices-turmeric.png",
+                        "size": "80-100 mesh / Whole Fingers",
+                        "description": "Vibrant yellow turmeric powder or whole dried fingers with high curcumin content."
                     }
                 ]
             }
@@ -196,65 +307,34 @@
             "name": "Peanuts",
             "category": "Peanuts",
             "short": "Salted, Masala & Blanch Peanuts",
-            "image": "/images/product-peanuts.jpg",
-            "description": "Cleaned, blanched and flavored peanuts for retail and bulk.",
-            "packaging": "Vacuum packs, 25 kg or as per client",
+            "image": "/images/products/peanuts-combined.png",
+            "description": "Premium peanuts sourced from major Indian crop zones, graded and processed for retail/wholesale distribution.",
+            "packaging": "Vacuum packed pouches or 25 kg bags",
             "spec": {
                 "origin": "India",
                 "packing": "25 kg vacuum / retail packs",
-                "qualities": ["Premium Grade", "A grade", "Commercial Grade"],
+                "qualities": ["Premium Grade", "A Grade"],
                 "variants": [
                     {
                         "key": "salted-peanuts",
                         "label": "Salted Peanuts",
-                        "image": "/images/peanut-salted.jpg",
-                        "description": "Evenly roasted and salted peanuts for snacking and ingredient use.",
-                        "packaging": "Retail pouches, 1–5 kg, or 25 kg bulk"
+                        "image": "/images/products/peanuts-salted.png",
+                        "size": "Custom Size",
+                        "description": "Evenly roasted, crunchy salted peanuts."
                     },
                     {
                         "key": "masala-peanuts",
                         "label": "Masala Peanuts",
-                        "image": "/images/peanut-masala.jpg",
-                        "description": "Peanuts coated with a proprietary masala spice blend for bold flavor.",
-                        "packaging": "Retail-ready pouches and 25 kg cartons"
+                        "image": "/images/products/peanuts-masala.png",
+                        "size": "Custom Size",
+                        "description": "Crispy peanuts seasoned in an Indian masala spice blend."
                     },
                     {
                         "key": "blanch-peanuts",
                         "label": "Blanch Peanuts",
-                        "image": "/images/peanut-blanch.jpg",
-                        "description": "Skinless, blanched peanuts suited for further processing and oil extraction.",
-                        "packaging": "25 kg vacuum-sealed bags"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "powder",
-            "name": "Vegetable Powders",
-            "category": "Vegetable Powders",
-            "short": "Nutrient-rich powders",
-            "image": "/images/product-powder.jpg",
-            "description": "Concentrated vegetable powders for OEM use.",
-            "packaging": "Sachets, bulk or as per client",
-            "spec": {
-                "origin": "India",
-                "examples": ["Vegetable Powder blends"],
-                "packing": "As per client requirement",
-                "qualities": ["Premium Grade", "Commercial Grade"],
-                "variants": [
-                    {
-                        "key": "vegetable-powder-blends",
-                        "label": "Vegetable Powder Blends",
-                        "image": "/images/powder-blend.jpg",
-                        "description": "Diverse vegetable powder blends formulated for nutritional fortification and flavoring.",
-                        "packaging": "Sachets, 25 kg lined bags, or bulk"
-                    },
-                    {
-                        "key": "powder",
-                        "label": "Powder",
-                        "image": "/images/product-powder.jpg",
-                        "description": "Fine vegetable powder, micronized for instant solubility in applications.",
-                        "packaging": "Sachets for retail or bulk food-grade bags for industrial use"
+                        "image": "/images/products/peanuts-blanch.png",
+                        "size": "Whole / Splits",
+                        "description": "Premium whole or split blanched skinless peanuts ready for roasting or processing."
                     }
                 ]
             }

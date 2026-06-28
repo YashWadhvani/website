@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaCheck } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -299,13 +300,13 @@ export default function ProductModal({
                                         </ul>
                                     </div>
                                     <div className="mt-6 pt-4 border-t border-[var(--border-light)]">
-                                        <a
-                                            href="/contact"
+                                        <Link
+                                            href={`/contact?inquiryType=product&productId=${product.id}&variantId=${activeVariant.key}`}
                                             className="inline-flex items-center justify-center w-full bg-gradient-to-r from-[var(--brand-dark-green)] to-[var(--brand-forest)] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
                                         >
                                             Request Quote for{" "}
                                             {activeVariant.label}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

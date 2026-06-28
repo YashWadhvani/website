@@ -4,11 +4,13 @@ import SectionHeading from '../../components/SectionHeading'
 import CategoryCard from '../../components/CategoryCard'
 
 const categories = [
-  {title:'Dehydrated Onion',image:'/images/product-onion.png',count:3},
-  {title:'Garlic',image:'/images/product-garlic.png',count:2},
-  {title:'Spices',image:'/images/product-spices.jpg',count:5},
-  {title:'Peanuts',image:'/images/product-peanuts.jpg',count:2},
-  {title:'Vegetable Powders',image:'/images/product-powder.jpg',count:3},
+  {title:'Dehydrated Onion - White',image:'/images/products/onion-white-combined.png',count:5},
+  {title:'Dehydrated Onion - Red',image:'/images/products/onion-red-combined.png',count:5},
+  {title:'Dehydrated Onion - Pink',image:'/images/products/onion-pink-combined.png',count:5},
+  {title:'Dehydrated Fried Onion',image:'/images/products/onion-fried-combined.png',count:2},
+  {title:'Dehydrated Garlic',image:'/images/products/garlic-combined.png',count:5},
+  {title:'Spices',image:'/images/products/spices-combined.png',count:6},
+  {title:'Peanuts',image:'/images/products/peanuts-combined.png',count:3},
 ]
 
 export default function CategoriesPage(){
